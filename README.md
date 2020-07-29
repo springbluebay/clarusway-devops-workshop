@@ -1,1 +1,0 @@
-# clarusway-devops-workshop

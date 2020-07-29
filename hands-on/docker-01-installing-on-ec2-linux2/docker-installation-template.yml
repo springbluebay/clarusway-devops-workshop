@@ -9,7 +9,7 @@ Parameters:
   KeyPairName:
     Description: Enter the name of your Key Pair for SSH connections.
     Type: String
-    Default: call.training
+    Default: blueman
 
 Resources:
   DockerMachineSecurityGroup:
@@ -24,7 +24,7 @@ Resources:
   DockerMachine:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-09d95fab7fff3776c
+      ImageId: ami-08f3d892de259504d
       InstanceType: t2.micro
       KeyName: !Ref KeyPairName
       SecurityGroupIds:

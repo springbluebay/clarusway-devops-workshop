@@ -8,8 +8,8 @@ Description: >
 Parameters:
   KeyPairName:
     Description: Enter the name of your Key Pair for SSH connections.
-    Type: String
-    Default: blueman
+    Type: AWS::EC2::KeyPair::KeyName
+    ConstraintDescription: Must one of the existing EC2 KeyPair
 
 Resources:
   DockerMachineSecurityGroup:
@@ -24,7 +24,7 @@ Resources:
   DockerMachine:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-08f3d892de259504d
+      ImageId: ami-09d95fab7fff3776c
       InstanceType: t2.micro
       KeyName: !Ref KeyPairName
       SecurityGroupIds:

@@ -188,6 +188,8 @@ docker image ls
 
 ```bash
 docker run -d --name welcome -p 80:80 springbluebay/flask-app:1.0
+yada
+docker run -p 80:80 springbluebay/flask-app:1.0
 docker ps 
 ```
 

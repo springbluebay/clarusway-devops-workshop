@@ -14,6 +14,14 @@ List of hands-on trainings within DevOps workshop as follows;
 
 - [Hands-on Docker-06 : Docker Compose Operations](./docker-06-compose-operations/README.md)
 
+- [Hands-on Docker-07 : Dockerize To-Do Web API Developed Python Flask](./docker-07-dockerize-to-do-app-on-python-flask/README.md)
+
+- [Hands-on Docker-08 : Docker Swarm Basic Operations](./docker-08-swarm-basic-operations/README.md)
+
+- [Hands-on Docker-09 : Docker Swarm Networking, Managing Services, Secrets and Stacks](./docker-09-swarm-networking-managing-services-secrets-stacks/README.md)
+
 - [Hands-on Jenkins-01 : Installing Jenkins on Amazon Linux 2 EC2 Instance](./jenkins-01-installing-on-ec2-linux2/README.md)
 
 - [Hands-on Jenkins-02 : Building Jenkins Job on Amazon Linux 2 AWS EC2 Instance](./jenkins-02-building-jenkins-job/README.md)
+
+- [Hands-on Jenkins-03 : Building Jenkins Pipeline on Amazon Linux 2 AWS EC2 Instance](./jenkins-03-building-jenkins-pipeline/README.md)

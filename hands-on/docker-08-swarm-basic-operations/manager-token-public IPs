@@ -1,0 +1,16 @@
+"manager token"
+docker swarm join --token SWMTKN-1-4n2luc9gixwfwz4z6thnzjnjsosi1inof4kabev3ne94sveu7l-81ssvd8krwyj7lf6s8vgxvbjq 172.31.54.224:2377
+
+"worker token"
+docker swarm join --token SWMTKN-1-4n2luc9gixwfwz4z6thnzjnjsosi1inof4kabev3ne94sveu7l-cwo1us79xujoppjrm5yv5rvb6 172.31.54.224:2377
+
+
+
+1 172.31.54.224  manager  ec2-100-26-162-30.compute-1.amazonaws.com
+2 172.31.58.173  manager  ec2-35-175-102-225.compute-1.amazonaws.com
+3 172.31.61.92   manager  ec2-18-210-18-49.compute-1.amazonaws.com
+4 172.31.54.127  worker   ec2-100-25-167-198.compute-1.amazonaws.com
+5 172.31.61.245  worker   ec2-100-25-152-173.compute-1.amazonaws.com
+
+
+leader node public dns:8080 gir

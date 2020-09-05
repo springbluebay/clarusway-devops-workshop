@@ -1,0 +1,20 @@
+"manager token"
+    docker swarm join --token SWMTKN-1-1gzz6390u2v669y6zeqz4nmnn0lqkd0igtjo8tfi121wh90hld-2rs8sx44wkpgi4rzz4665vw0y 172.31.52.180:2377
+
+"worker token"
+    docker swarm join --token SWMTKN-1-1gzz6390u2v669y6zeqz4nmnn0lqkd0igtjo8tfi121wh90hld-4s5j5iwpe7eeutdobm3b32bwv 172.31.52.180:2377
+
+
+1 54.209.8.49 (public) manager  ip-172-31-52-180.ec2.internal  (private)
+2 100.25.180.240  manager  ip-172-31-60-84.ec2.internal
+3 100.25.205.254   manager  ip-172-31-54-51.ec2.internal
+4 18.209.152.243  worker   ip-172-31-50-185.ec2.internal
+5 54.198.59.251  worker   ip-172-31-48-228.ec2.internal
+
+
+leader node public dns:8080 gir
+
+ssh -i "blueman.pem" ec2-user@ec2-54-209-8-49.compute-1.amazonaws.com
+
+375ddqpvhiy4iyublu9wwkbod
+

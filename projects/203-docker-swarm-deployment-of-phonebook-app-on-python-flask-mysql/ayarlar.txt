@@ -1,0 +1,32 @@
+  
+"cfn-template.yml" üzerinden yaptık dersi. projenin tam çözümü değil.
+worker üzerinden mastere bağlanacağımızdanpython ve cli yeterli. zaten 2 instancın role den dolayı birbirlerine bağlanma yetkisi var
+
+  
+1  docker-compose --version
+2  docker --version
+3  python --version
+4  pip3 --version
+5  sudo yum install python-pip
+6  sudo pip install ec2instanceconnectcli
+mssh -r us-east-1 <instance-id>
+mssh -r us-east-1 <instance-id> docker swarm join-token worker | grep docker
+$(mssh -r us-east-1 <master-instance-id> docker swarm join-token worker | grep docker)   worker dan mastera bağlanma kodu..
+
+
+manager:
+curl 169.254.169.254/latest/meta-data/instance-id
+docker swarm init
+Swarm initialized: current node (e1qk8nrecu2javy9c7af8ra95) is now a manager.
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-64bzxyrpu65vlfnuw7fb5qamtl53zi8cm4vbivr753wnvxiey1-5mjp8y2su7n06a9png06ori0x 172.31.93.98:2377
+
+docker swarm join-token worker
+docker swarm join-token worker | grep docker   (sadece kod olan yeri almak istiyorsak)
+docker service create \
+    --name=viz \
+    --publish=8080:8080/tcp \
+    --constraint=node.role==manager \
+    --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+    dockersamples/visualizer

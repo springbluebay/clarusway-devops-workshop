@@ -1,0 +1,42 @@
+172.31.79.92     master private
+3.237.5.37    master public
+
+3.234.222.152  worker-1 Public
+3.231.218.149  worker-2 public
+
+sırayla yükle
+sudo hostnamectl set-hostname master
+sudo hostnamectl set-hostname worker1
+sudo hostnamectl set-hostname worker2
+
+tüm makinelere kur
+sudo apt-get update && sudo apt-get install -y apt-transport-https gnupg2
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl kubeadm kubelet kubernetes-cni docker.io
+kubectl version
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo systemctl start kubelet
+sudo systemctl enable kubelet
+
+sudo usermod -aG docker $USER
+newgrp docker
+
+systemctl status kubelet
+
+cat << EOF | sudo tee /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
+
+sudo sysctl --system
+
+kellens amı
+ami-00eaaeaf40d4014d0
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+kubeadm join 172.31.79.92:6443 --token b3lqie.03u0oobukx8enn8c \
+    --discovery-token-ca-cert-hash sha256:00b10145584ce87709108b0c4f70ed2d957d927dd3785eb759605630e4dd573a 

@@ -220,7 +220,7 @@ kubectl describe rs <rs-name>
 - Delete a pod and show new pod is immediately created.
 
 ```bash
-kubectl delete pod <pod-name>
+kubectl delete pod <deployment-pod-name>
 kubectl get pods
 ```
 

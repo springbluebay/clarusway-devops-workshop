@@ -47,7 +47,6 @@ At the end of the this hands-on training, students will be able to;
 > free -m
 > sudo swapoff -a && sudo sed -i '/ swap / s/^/#/' /etc/fstab
 > ```
->
 
 - Hostname change of the nodes, so we can discern the roles of each nodes. For example, you can name the nodes (instances) like `manager, worker-1 and worker-2`
 

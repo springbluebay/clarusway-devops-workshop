@@ -100,7 +100,7 @@ git checkout dev
 ```
 
 - Test the compiled source code.
-
+sudo chmod +x mvnw
 ```bash
 ./mvnw clean test
 ```
@@ -191,6 +191,7 @@ git checkout dev
 git merge feature/msp-5
 git push origin dev
 ```
+git config --global credential.helper store   ***********************
 
 ## MSP 6 - Prepare Dockerfiles for Microservices
 
